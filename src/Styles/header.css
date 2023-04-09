@@ -1,0 +1,13 @@
+.app-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+  margin: 10px;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+.app-header-menu {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+}

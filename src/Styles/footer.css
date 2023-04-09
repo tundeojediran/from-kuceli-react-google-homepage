@@ -1,0 +1,26 @@
+.footerContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* height: 70px; */
+  background-color: #f3f3f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  color: #535557;
+}
+
+.locationContainer {
+  /* height: 50%; */
+  border-bottom: 1px solid rgba(207, 207, 207, 0.466);
+}
+.locationContainer,
+.bottom {
+  padding: 10px 30px;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 12px; */
+}

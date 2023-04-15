@@ -1,12 +1,31 @@
 import { useState } from "react";
 export default function SearchBar() {
-  const [updated, setUpdated] = useState("");
+
+ // two states
+//  - the input field value state
+//  - the value under the search bar
+
+  // let searchInput = "";
+
+  // function setSearchInput(value) {
+  //   searchInput = value;
+  // }
+  const [searchInput, setSearchInput] = useState(""); // input field
+  const [updated, setUpdated] = useState(""); // state setup
+
+  const handleChange = (event) => {
+    console.log(event)
+    console.log(event.target.value)
+    setSearchInput(event.target.value)
+  }
 
   const handleKeyDown = (event) => {
+    console.log(event)
     if (event.key === "Enter") {
-      setUpdated(event.target.value);
+      setUpdated(searchInput);
     }
   };
+
   return (
     <div>
       <div className="searchContainer">
@@ -22,7 +41,9 @@ export default function SearchBar() {
           type="text"
           id="message"
           name="message"
+          onChange={handleChange}
           onKeyDown={handleKeyDown}
+          value={searchInput}
         />
 
         <svg
@@ -77,9 +98,10 @@ export default function SearchBar() {
         style={{
           fontSize: "14px",
           fontWeight: "400",
+          textAlign: 'center'
         }}
       >
-        {updated}
+       {updated}
       </h2>
     </div>
   );

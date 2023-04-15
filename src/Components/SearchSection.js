@@ -4,6 +4,22 @@ import SearchBar from "./SearchBar";
 import Buttons from "./Buttons";
 import LanguageLink from "./LanguageLink";
 
+
+const languages = [
+  {
+    title: 'Hausa', link: "https://blog.bitsrc.io/how-to-trigger-animation-events-using-react-a6c3256b21c6"
+  },
+  {
+    title: 'Igbo', link: "https://blog.bitsrc.io/how-to-trigger-animation-events-using-react-a6c3256b21c6"
+  },
+  {
+    title: 'Èdè Yorùbá"', link: "https://blog.bitsrc.io/how-to-trigger-animation-events-using-react-a6c3256b21c6"
+  },
+  {
+    title: 'Nigerian Pidgin', link: "https://blog.bitsrc.io/how-to-trigger-animation-events-using-react-a6c3256b21c6"
+  },
+]
+
 const SearchSection = () => {
   return (
     <>
@@ -15,10 +31,11 @@ const SearchSection = () => {
           <Buttons text={"I'm Feeling Lucky"} />
         </div>
         <p style={{ fontSize: "12px", marginTop: "25px" }}>
-          Google offered in: <LanguageLink title={"Hausa"} />{" "}
-          <LanguageLink title={"Igbo"} />
-          <LanguageLink title={"Èdè Yorùbá"} />
-          <LanguageLink title={"Nigerian Pidgin"} />
+        Google offered in: {languages.map((language, index) => {
+            return (
+              <LanguageLink title={language.title} link={language.link} />
+            )
+          })}
         </p>
       </div>
     </>

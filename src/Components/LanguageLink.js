@@ -2,7 +2,7 @@ export default function LanguageLink(props) {
   return (
     <>
       <a
-        href=""
+        href={props.link}
         style={{
           marginLeft: "7px",
           textDecoration: "none",
